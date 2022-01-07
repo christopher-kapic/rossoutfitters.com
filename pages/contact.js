@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar />
 
       <main className="main">
-        <BackgroundVideo title="Ross Outfitters" video="/temp_video_for_share2.mp4" lml="#about">
+        <BackgroundVideo title="Ross Outfitters" video="/https://rossoutfitters.b-cdn.net/ro-home34.mp4" lml="#about">
           <p>Premium Wisconsin hunting - enjoy the hunt of your life in Western Wisconsin!</p>
         </BackgroundVideo>
 
