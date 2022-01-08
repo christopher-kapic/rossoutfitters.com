@@ -5,6 +5,7 @@ import MenuLogo from '../../icons/menu.svg';
 import XLogo from '../../icons/x.svg';
 
 import { useState } from 'react';
+import Link from 'next/link'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,9 @@ export const Navbar = () => {
     <>
       <nav style={{position: 'sticky', top: 0, zIndex: 99}}>
         <div className="mobileNavbar">
-          <a href="/">{contact_config.title}</a>
+          <Link href="/">
+            <a>{contact_config.title}</a>
+          </Link>
           {
             isOpen ?
             <XLogo onClick={() => setIsOpen(false)} /> :
@@ -21,14 +24,30 @@ export const Navbar = () => {
           }
         </div>
         <div className={"navbar " + (isOpen ? "vispos" : "")} onClick={() => setIsOpen(false)}>
-          <a href="/#" className="navbarTitle" style={{paddingRight: "8vw"}}>{contact_config.title}</a>
-          <a href="/#" className="homeDisp">Home</a>
-          <a href="/#about">About</a>
-          <a href="/whitetail">Whitetail</a>
-          <a href="/lodging">Lodging</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/contact">Contact</a>
+          <Link href="/#">
+            <a className="navbarTitle" style={{paddingRight: "8vw"}}>{contact_config.title}</a>
+          </Link>
+          <Link href="/#">
+            <a className="homeDisp">Home</a>
+          </Link>
+          <Link href="/#about">
+            <a>About</a>
+          </Link>
+          <Link href="/whitetail">
+            <a>Whitetail</a>
+          </Link>
+          <Link href="/lodging">
+            <a>Lodging</a>
+          </Link>
+          <Link href="/pricing">
+            <a>Pricing</a>
+          </Link>
+          <Link href="/gallery">
+            <a>Gallery</a>
+          </Link>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
         </div>
       </nav>
       <style jsx>
