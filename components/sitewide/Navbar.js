@@ -11,8 +11,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <nav style={{position: 'fixed', width: "100%", top: 0, zIndex: 99}}>
+    <div style={{position: "sticky", top: 0, zIndex: 99, height: 60}}>
+      <nav style={{width: "100%", top: 0, zIndex: 99}} className='navWrap'>
         <div className="mobileNavbar">
           <Link href="/">
             <a>{contact_config.title}</a>
@@ -52,6 +52,9 @@ export const Navbar = () => {
       </nav>
       <style jsx>
         {`
+          .navWrap {
+            position: fixed;
+          }
           .homeDisp {
             display: block;
           }
@@ -96,6 +99,9 @@ export const Navbar = () => {
             transform: translateX(0);
           }
           @media (min-width: 769px) {
+            .navWrap {
+              position: sticky;
+            }
             .homeDisp {
               display: none;
             }
@@ -122,6 +128,6 @@ export const Navbar = () => {
           }
         `}
       </style>
-    </>
+    </div>
   )
 }
