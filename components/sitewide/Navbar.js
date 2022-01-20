@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav style={{position: 'sticky', top: 0, zIndex: 99}}>
+      <nav style={{position: 'fixed', width: "100%", top: 0, zIndex: 99}}>
         <div className="mobileNavbar">
           <Link href="/">
             <a>{contact_config.title}</a>
