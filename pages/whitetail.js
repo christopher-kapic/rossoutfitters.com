@@ -4,6 +4,7 @@ import { TopInfoBar } from '../components/sitewide/TopInfoBar'
 import { BackgroundVideo } from '../components/backgroundVideo';
 
 import style_config from '../styles/config.json';
+import { Footer } from '../components/sitewide/Footer';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
 
         </div>
       </main>
+      <Footer />
       <style jsx>
         {`
           main {

@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav style={{position: "sticky", top: 0, zIndex: 99, height: 60}}>
+    <nav style={{position: "sticky", top: 0, zIndex: 99, height: 60, boxShadow: "0px 2px 4px #444444"}}>
       <div style={{width: "100%", top: 0, zIndex: 99}} className='navWrap'>
         <div className="mobileNavbar">
           <Link href="/">
